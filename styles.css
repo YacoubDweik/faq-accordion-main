@@ -1,0 +1,107 @@
+@font-face {
+  font-family: "Work Sans";
+  src: url(./assets/fonts/WorkSans-VariableFont_wght.ttf);
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --light-pink: hsl(275, 100%, 97%);
+  --grayish-purple: hsl(292, 16%, 49%);
+  --dark-purple: hsl(292, 42%, 14%);
+  --font-size: 16px;
+}
+
+body {
+  background-color: var(--light-pink);
+  background-image: url(./assets/images/background-pattern-mobile.svg);
+  background-repeat: repeat-x;
+}
+
+.container {
+  width: min(90%, 540px);
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: white;
+  padding: 25px;
+  border-radius: 10px;
+  font-family: "Work Sans";
+  font-size: var(--font-size);
+}
+
+h1 {
+  margin-bottom: 25px;
+}
+
+h1 img {
+  width: 25px;
+  margin-right: 25px;
+}
+
+ul {
+  list-style: none;
+}
+
+li {
+  color: var(--dark-purple);
+  font-weight: 700;
+  margin: 25px 0;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 25px;
+  transition: 0.3s;
+}
+
+li:hover {
+  color: #ad28eb;
+  cursor: pointer;
+}
+
+li:not(:first-child) {
+  border-top: 1px solid #ccc;
+}
+
+li:last-child {
+  margin-bottom: 0;
+}
+
+li span {
+  width: 75%;
+}
+
+img.active {
+  content: url(./assets/images/icon-minus.svg);
+}
+
+p {
+  display: none;
+  color: var(--grayish-purple);
+  line-height: 1.5;
+  font-weight: 400;
+  margin-top: 25px;
+  font-size: 14px;
+  max-width: 95%;
+}
+
+p.active {
+  display: block;
+}
+
+@media (min-width: 600px) {
+  body {
+    background-image: url(./assets/images/background-pattern-desktop.svg);
+  }
+
+  li span {
+    width: 90%;
+  }
+}
